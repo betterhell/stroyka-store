@@ -1,0 +1,6 @@
+@mixin manrepoFont($fw, $fs, $lh) {
+  font-family: Manrope, serif ;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

@@ -1,0 +1,145 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.buttonYellow {
+  transition: all 0.2s ease;
+  background-color: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  color: $black;
+  gap: 8px;
+  @include manrepoFont(500, 18px, 126%);
+  border: none;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    transition: all 0.2s ease;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: $white;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+    border: none;
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:active {
+    transition: all 0.2s ease;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: #D1D1D3;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+    border: none;
+
+    svg {
+      path {
+        stroke: $lightGray;
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: $lightGray;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: $white;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+    border: none;
+    cursor: not-allowed;
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.button {
+  transition: all 0.2s ease;
+  background-color: transparent;
+  display: flex;
+  border: 1px solid $lightGray;
+  align-items: center;
+  padding: 12px;
+  color: $black;
+  gap: 8px;
+  @include manrepoFont(500, 18px, 126%);
+  cursor: pointer;
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    transition: all 0.2s ease;
+    background-color: $black;
+    display: flex;
+    border: 1px solid $lightGray;
+    align-items: center;
+    padding: 12px;
+    color: $white;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:active {
+    transition: all 0.2s ease;
+    background-color: $black;
+    display: flex;
+    border: 1px solid $lightGray;
+    align-items: center;
+    padding: 12px;
+    color: #D1D1D3;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+
+    svg {
+      path {
+        stroke: $lightGray;
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: $lightGray;
+    display: flex;
+    border: 1px solid $lightGray;
+    align-items: center;
+    padding: 12px;
+    color: $white;
+    gap: 8px;
+    @include manrepoFont(500, 18px, 126%);
+    cursor: not-allowed;
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
