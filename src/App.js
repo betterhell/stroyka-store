@@ -1,10 +1,10 @@
-import NumberInput from "./components/UI/NumberInput/NumberInput";
+import Header from "./components/Header/Header";
 
 function App() {
 
     return (
     <div className="App">
-        <NumberInput placeholderMax="100 000" />
+        <Header />
     </div>
   );
 }
