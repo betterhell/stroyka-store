@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.lowerHeader {
+  border-bottom: 1px solid $borderColor;
+  .lowerHeaderContainer {
+    padding: 20px 140px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: $lowerHeaderTextColor;
+      @include manrepoFont(500, 16px, 150%);
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.footer {
+  background-color: $grayBlack;
+  display: flex;
+  flex-direction: column;
+  padding: 0 140px;
+  .footerContainer {
+    padding: 40px 0;
+    border-bottom: 1px solid $upperHeaderTextColor;
+    display: flex;
+    justify-content: space-between;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      a {
+        text-decoration: none;
+        color: $borderColor;
+
+      }
+    }
+
+    .mailTo, .address {
+      display: flex;
+      svg {
+        margin-right: 10px;
+        path {
+          stroke: $borderColor;
+        }
+      }
+    }
+
+    .footerLinks {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      column-gap: 16px;
+      row-gap: 12px;
+
+      .footerLinksColumn {
+        display: grid;
+        flex-direction: column;
+        column-gap: 12px;
+        row-gap: 16px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $borderColor;
+        display: flex;
+
+        svg {
+          display: none;
+        }
+
+        &:hover {
+          svg {
+            display: flex;
+            path {
+              stroke: $lightGray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lowerFooter {
+    padding: 16px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: $grayBlack;
+
+    .banks {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    p {
+      color: $lightGray;
+      @include manrepoFont(500, 16px, 150%)
+    }
+  }
+}

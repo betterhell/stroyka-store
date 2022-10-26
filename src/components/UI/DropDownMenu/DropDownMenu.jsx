@@ -11,7 +11,7 @@ const DropDownMenu = () => {
 
     const menuIsOpen = () => {
         if (!isOpen) {
-            setIsOpen(true)
+           setIsOpen(true)
         } else {
             setIsOpen(false)
         }
