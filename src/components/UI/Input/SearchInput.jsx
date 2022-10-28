@@ -2,16 +2,11 @@ import React from 'react';
 import {ReactComponent as SearchIcon} from "../../../assets/icons/searchIcon24px.svg";
 import classes from "./_SearchInput.module.scss"
 
-const SearchInput = ({width}) => {
+const SearchInput = () => {
     return (
         <div className={classes.searchContainer}>
-            <div style={{width: width}} className={classes.searchInput}>
-                <input style={{width: width}} placeholder="Поиск" type="text"/>
-            </div>
-
-            <div className={classes.searchButton}>
-                <button>{<SearchIcon />}</button>
-            </div>
+            <input className={classes.searchInput} placeholder="Поиск" type="text"/>
+            <button className={classes.searchButton}>{<SearchIcon />}</button>
         </div>
     );
 };

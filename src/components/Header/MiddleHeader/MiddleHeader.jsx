@@ -12,31 +12,31 @@ import {ReactComponent as BasketIcon} from "../../../assets/icons/basketIcon24px
 const MiddleHeader = () => {
     return (
         <div className={classes.middleHeader}>
-            <div className={classes.leftSide}>
-                <div className={classes.logo}>
-                    <a href="/"><Logo /></a>
-                </div>
-            </div>
-            <div className={classes.rightSide}>
-                <div className={classes.menuAndSearch}>
-                    <Button icon={<MenuIcon />} label="Каталог" initialBg="yellow"  />
-                    <SearchInput width="394px" />
-                </div>
+             <div className={classes.logo}>
+                 <a href="/"><Logo /></a>
+             </div>
 
-                <div className={classes.buttonBar}>
-                    <button>
-                        <ProfileIcon />
-                        <p>Профиль</p>
-                    </button>
-                    <button>
-                        <OrdersIcon />
-                        <p>Заказы</p>
-                    </button>
-                    <button>
-                        <BasketIcon />
-                        <p>Корзина</p>
-                    </button>
-                </div>
+            <div className={classes.menu}>
+                <Button icon={<MenuIcon />} label="Каталог" initialBg="yellow"  />
+            </div>
+
+            <div className={classes.searchInput}>
+                <SearchInput />
+            </div>
+
+            <div className={classes.buttonBar}>
+                <button>
+                    <ProfileIcon />
+                    <p>Профиль</p>
+                </button>
+                <button>
+                    <OrdersIcon />
+                    <p>Заказы</p>
+                </button>
+                <button>
+                    <BasketIcon />
+                    <p>Корзина</p>
+                </button>
             </div>
         </div>
     );

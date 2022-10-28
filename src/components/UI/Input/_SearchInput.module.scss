@@ -3,40 +3,40 @@
 
 .searchContainer {
   position: relative;
-  display: inline-block;
-}
+  width: 100%;
 
-.searchInput {
-  display: flex;
-  input {
-    padding: 12px 35px 12px 16px;
-    margin: 0;
-    height: 20px;
-    background-color: $grayWhite;
-    border: none;
-    border-bottom: 1px solid $lightGray;
-    @include manrepoFont(500, 18px, 136%);
-
-    &:hover {
+  .searchInput {
+      width: 100%;
+      padding: 12px 30px 12px 12px;
+      height: 20px;
+      background-color: $grayWhite;
       border: none;
-      border-bottom: 1px solid #8B8D92;
+      border-bottom: 1px solid $lightGray;
+      @include manrepoFont(500, 18px, 136%);
+
+      &:hover {
+        border: none;
+        border-bottom: 1px solid #8B8D92;
+      }
+
+      &:focus {
+        outline: 0;
+        border: none;
+        border-bottom: 1px solid #8B8D92;
     }
 
-    &:focus {
-      outline: 0;
-      border: none;
-      border-bottom: 1px solid #8B8D92;
-    }
   }
-}
 
-.searchButton {
-  position: absolute;
-  top: 8px;
-  right: 0;
-  button {
+  .searchButton {
+    position: absolute;
+    top: 0;
+    right: -35px;
+    padding: 10px 0;
     cursor: pointer;
     border: none;
     background-color: transparent;
   }
 }
+
+
+
