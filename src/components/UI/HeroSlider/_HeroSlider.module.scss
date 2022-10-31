@@ -1,0 +1,83 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.sliderWrapper {
+  position: relative;
+  max-width: 1360px;
+  margin: 40px auto 80px auto;
+  //padding: 40px 0 80px 0;
+
+  .slider_bg {
+  }
+
+  .slider_actions {
+
+    .slider_info {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      max-width: 570px;
+      width: 100%;
+
+      h1 {
+        @include manrepoFont(700, 48px, 120%);
+        color: $lowerHeaderTextColor;
+        margin: 0;
+      }
+
+      p {
+        @include manrepoFont(400, 20px, 140%);
+        color: $lowerHeaderTextColor;
+        margin-bottom: 100px;
+      }
+
+      a {
+        padding: 12px 24px;
+        background-color: $yellow;
+        color: $black;
+        text-decoration: none;
+        @include manrepoFont(500, 18px, 136%);
+
+        &:hover {
+          background-color: $grayBlack;
+          color: $white;
+        }
+
+        &:active {
+          background-color: $grayBlack;
+          color: $lightGray;
+        }
+      }
+
+    }
+
+  }
+  .slider__buttons {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+
+    button {
+      background-color: white;
+
+      &:hover {
+        background-color: $grayBlack;
+        svg {
+          path {
+            stroke: $white;
+          }
+        }
+      }
+
+      &:active {
+        svg {
+          path {
+            stroke: $lightGray;
+          }
+        }
+      }
+    }
+  }
+}

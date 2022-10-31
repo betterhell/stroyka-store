@@ -16,7 +16,6 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-right: 16px;
 
       a {
         text-decoration: none;
@@ -25,12 +24,17 @@
       }
     }
 
-    .mailTo, .address {
+    .socialLinks {
       display: flex;
-      svg {
-        margin-right: 10px;
-        path {
-          stroke: $borderColor;
+      flex-direction: column;
+      gap: 15px;
+      .mailTo, .address {
+        display: flex;
+        svg {
+          margin-right: 10px;
+          path {
+            stroke: $borderColor;
+          }
         }
       }
     }
@@ -83,6 +87,31 @@
     p {
       color: $lightGray;
       @include manrepoFont(500, 16px, 150%)
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 30px 90px;
+
+    .footerContainer {
+      padding: 0;
+      flex-direction: column;
+
+      .info {
+        padding: 30px 0;
+        border-bottom: 1px solid $upperHeaderTextColor;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .footerLinks {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid $upperHeaderTextColor;
+      }
     }
   }
 }

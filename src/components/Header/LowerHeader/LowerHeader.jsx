@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from "./_LowerHeader.module.scss";
 
-const LowerHeader = () => {
+const LowerHeader = ({display}) => {
     return (
-        <div className={classes.lowerHeader}>
+        <div style={{display: display}} className={classes.lowerHeader}>
             <div className={classes.lowerHeaderContainer}>
                 <a href="/actions">Акции</a>
                 <a href="/materials">Строительные материалы</a>

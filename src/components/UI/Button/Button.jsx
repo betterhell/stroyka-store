@@ -2,15 +2,15 @@ import classes from "./_Button.module.scss"
 import PropTypes from "prop-types"
 
 
-const Button = ({label, icon, initialBg, disabled}) => {
+const Button = ({action, label, icon, initialBg, disabled}) => {
 
     return (
-        <button
+        <button onClick={action}
             disabled={disabled}
             className={initialBg === "yellow" ? classes.buttonYellow : classes.button}
         >
-            {icon && icon}
-            <p>{label}</p>
+            {icon}
+            {label ? <p>{label}</p> : null}
         </button>
     )
 };

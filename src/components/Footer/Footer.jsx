@@ -9,16 +9,16 @@ import MasterCardIcon from "../../assets/banks/Mastercard.png";
 import MaestroIcon from "../../assets/banks/Maestro.png";
 import MirIcon from "../../assets/banks/Mir.png";
 
-
-
 const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div className={classes.footerContainer}>
                 <div className={classes.info}>
                     <a href="/"><LogoIcon /></a>
-                    <a className={classes.mailTo} href="@mail.com"><MailIcon />info@stroykastore.ru</a>
-                    <a className={classes.address} href="/contacts"><MapIcon />Москва, ул. Камушкина 10</a>
+                    <div className={classes.socialLinks}>
+                        <a className={classes.mailTo} href="@mail.com"><MailIcon />info@stroykastore.ru</a>
+                        <a className={classes.address} href="/contacts"><MapIcon />Москва, ул. Камушкина 10</a>
+                    </div>
                 </div>
                 <div className={classes.footerLinks}>
                     <div className={classes.footerLinksColumn}>

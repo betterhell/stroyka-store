@@ -56,3 +56,9 @@
     padding: 0 90px;
   }
 }
+
+@media screen and (max-width: 740px) {
+  .upperHeader {
+    display: none;
+  }
+}
