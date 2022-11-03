@@ -1,0 +1,64 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.card {
+  border: 1px solid $borderColor;
+  display: flex;
+  max-width: 572px;
+  height: 208px;
+  position: relative;
+
+
+  .cardImage {
+    img {
+      max-width: 572px;
+      height: 208px;
+    }
+  }
+
+  .cardDiscountBadge {
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 2px 4px;
+    display: flex;
+    border: 2px solid #FBE303;
+
+    p {
+      margin: 0;
+      @include manrepoFont(500, 15px, 145%);
+      color: $black;
+    }
+  }
+
+  .cardInfo {
+    border-left: 1px solid $borderColor;
+    padding: 16px;
+
+    a {
+      @include manrepoFont(500, 16px, 150%);
+      text-decoration: none;
+      color: $grayBlack;
+    }
+    .cardPrice {
+      margin: 40px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      h2 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        text-decoration: line-through;
+        color: $lineThrough;
+      }
+    }
+    button {
+      width: 100%;
+    }
+  }
+}

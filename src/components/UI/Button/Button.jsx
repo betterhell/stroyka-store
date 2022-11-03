@@ -19,7 +19,4 @@ Button.propTypes = {
     label: PropTypes.string,
 }
 
-
-
-
 export default Button;

@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.linkButton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid $lightGray;
+  color: $black;
+  @include manrepoFont(500, 18px, 136%);
+  text-decoration: none;
+
+  &:hover {
+    background-color: $grayBlack;
+    color: $white;
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:active {
+    color: $lightGray;
+
+    svg {
+      path {
+        stroke: $lightGray;
+      }
+    }
+  }
+}

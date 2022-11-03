@@ -41,7 +41,7 @@ export const productList = [
     {
         image: product01,
         desc: "Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)",
-        regularPrice: 449,
+        regularPrice: 499,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -51,7 +51,7 @@ export const productList = [
         desc: "Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная",
         regularPrice: 660,
         discount: true,
-        discountedPercent: 25,
+        discountedPercent: 50,
         id: uuidv4()
     },
     {

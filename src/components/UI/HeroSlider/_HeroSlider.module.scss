@@ -11,13 +11,15 @@
   }
 
   .slider_actions {
+    display: flex;
 
     .slider_info {
       position: absolute;
-      top: 40px;
-      left: 100px;
-      max-width: 570px;
-      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 40px 90px;
+      max-width: 1180px;
+      width: 50%;
 
       h1 {
         @include manrepoFont(700, 48px, 120%);
@@ -28,36 +30,19 @@
       p {
         @include manrepoFont(400, 20px, 140%);
         color: $lowerHeaderTextColor;
-        margin-bottom: 100px;
       }
-
-      a {
-        padding: 12px 24px;
-        background-color: $yellow;
-        color: $black;
-        text-decoration: none;
-        @include manrepoFont(500, 18px, 136%);
-
-        &:hover {
-          background-color: $grayBlack;
-          color: $white;
-        }
-
-        &:active {
-          background-color: $grayBlack;
-          color: $lightGray;
-        }
-      }
-
     }
-
   }
-  .slider__buttons {
-    display: flex;
-    gap: 12px;
+
+  .slider_buttons {
+    padding: 0 90px;
+    max-width: 1180px;
+    width: 100%;
     position: absolute;
-    right: 100px;
     bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     button {
       background-color: white;
@@ -79,5 +64,28 @@
         }
       }
     }
+
+    a {
+      padding: 12px 24px;
+      background-color: $yellow;
+      color: $black;
+      text-decoration: none;
+      @include manrepoFont(500, 18px, 136%);
+
+      &:hover {
+        background-color: $grayBlack;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $grayBlack;
+        color: $lightGray;
+      }
+    }
+  }
+
+  .slider_controls {
+    display: flex;
+    gap: 12px;
   }
 }

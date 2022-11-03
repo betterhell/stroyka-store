@@ -8,7 +8,7 @@ import {ReactComponent as ProfileIcon} from "../../../assets/icons/userIcon24px.
 import {ReactComponent as CloseIcon} from "../../../assets/icons/closeIcon17px.svg";
 import {ReactComponent as OrdersIcon} from "../../../assets/icons/orderIcon24px.svg";
 import {ReactComponent as BasketIcon} from "../../../assets/icons/basketIcon24px.svg";
-import MobileMenu from "../../mobileMenu/MobileMenu";
+import MobileMenu from "../../MobileMenu/MobileMenu";
 
 
 const MiddleHeader = () => {
