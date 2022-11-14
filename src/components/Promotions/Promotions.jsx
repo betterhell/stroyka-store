@@ -4,8 +4,12 @@ import LinkButton from "../UI/LinkButton/LinkButton";
 import ProductCard from "../UI/ProductCard/ProductCard";
 import {productList} from "../../data/productList";
 
-const Promotions = ({label}) => {
-    const filteredProduct = productList.filter((item => item.discount))
+const Promotions = ({label, count}) => {
+    let filteredProduct = productList.filter((item => item.discount))
+
+    if (count) {
+        filteredProduct = filteredProduct.slice(0, count)
+    }
 
     return (
         <div className={classes.promoWrapper}>

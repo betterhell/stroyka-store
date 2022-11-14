@@ -1,0 +1,77 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.registration {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $lightGray;
+  max-width: 580px;
+  margin: 80px auto;
+  gap: 24px;
+
+  .regFields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+
+  h1 {
+    margin: 0;
+    @include manrepoFont(600, 34px, 130%);
+    color: $grayBlack;
+    text-align: center;
+  }
+
+  .checkPasswords {
+    margin: 0;
+    color: firebrick;
+    @include manrepoFont(400, 13px, 120%);
+  }
+}
+
+
+.email, .password, .name, .confirmPassword {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    @include manrepoFont(500, 16px, 150%);
+    color: $grayBlack;
+  }
+
+  input {
+    padding: 12px 16px;
+    height: 20px;
+    background-color: $grayWhite;
+    border: none;
+    border-bottom: 1px solid $lightGray;
+    @include manrepoFont(500, 18px, 136%);
+
+    &:hover {
+      border: none;
+      border-bottom: 1px solid #8B8D92;
+    }
+
+    &:focus {
+      outline: 0;
+      border: none;
+      border-bottom: 1px solid #8B8D92;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.password {
+  a {
+    text-decoration: none;
+    @include manrepoFont(500, 15px, 145%);
+    color: $upperHeaderTextColor;
+  }
+}

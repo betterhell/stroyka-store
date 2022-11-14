@@ -9,7 +9,7 @@ const ProductCard = ({label, desc, image, discountedPercent, discount, regularPr
     return (
         <div className={classes.card}>
             <div className={classes.cardImage}>
-                <img src={image} alt={desc}/>
+                <a href="/product/:id"><img src={image} alt={desc}/></a>
             </div>
             {discount
                 ? (
