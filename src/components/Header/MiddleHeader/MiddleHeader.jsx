@@ -9,9 +9,12 @@ import {ReactComponent as CloseIcon} from "../../../assets/icons/closeIcon17px.s
 import {ReactComponent as OrdersIcon} from "../../../assets/icons/orderIcon24px.svg";
 import {ReactComponent as BasketIcon} from "../../../assets/icons/basketIcon24px.svg";
 import MobileMenu from "../../MobileMenu/MobileMenu";
+import {useNavigate} from "react-router-dom";
 
 
 const MiddleHeader = () => {
+    const navigate = useNavigate()
+
     const [userScreenWidth, setUserScreenWidth] = useState(0)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -55,7 +58,7 @@ const MiddleHeader = () => {
             </div>
 
             <div className={classes.buttonBar}>
-                <button className={classes.profileBtn}>
+                <button onClick={() => navigate("/login")} className={classes.profileBtn}>
                     <ProfileIcon />
                     <p>Профиль</p>
                 </button>

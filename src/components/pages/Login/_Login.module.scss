@@ -29,7 +29,7 @@
   }
 
   input {
-    padding: 12px 16px;
+    padding: 12px 30px 12px 16px;
     height: 20px;
     background-color: $grayWhite;
     border: none;
@@ -94,9 +94,18 @@
 }
 
 .password {
+  position: relative;
   a {
     text-decoration: none;
     @include manrepoFont(500, 15px, 145%);
     color: $upperHeaderTextColor;
   }
+}
+
+.passwordIcon {
+  position: absolute;
+  right: 0;
+  top: 33px;
+  cursor: pointer;
+  padding: 14px 10px;
 }
