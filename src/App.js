@@ -6,6 +6,7 @@ import Promotions from "./components/Promotions/Promotions";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Login from "./components/pages/Login/Login";
 import Registration from "./components/pages/Registration/Registration";
+import Profile from "./components/pages/Profile/Profile";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/actions" element={<Promotions />} />
                 <Route path="*" element={<Notfound />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/registration" element={<Registration />} />
             </Routes>
         <Footer />

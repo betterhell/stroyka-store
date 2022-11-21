@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Button from "../../UI/Button/Button";
 import classes from "./_Registration.module.scss"
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth"
+import {setDoc, doc, serverTimestamp} from "firebase/firestore"
 import {db} from "../../../firebase.config"
 import {useNavigate} from "react-router-dom";
 
@@ -53,6 +54,13 @@ const Registration = () => {
             updateProfile(auth.currentUser, {
                 displayName: name,
             })
+
+            const formDataCopy = {...formData}
+            delete formDataCopy.password
+            delete formDataCopy.confirmPassword
+            formDataCopy.timestamp = serverTimestamp()
+
+            await setDoc(doc(db, "users", user.uid), formDataCopy)
 
             navigate("/")
         } catch (error) {

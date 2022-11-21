@@ -1,0 +1,59 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 768px;
+
+  .profileForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid $borderColor;
+    padding: 36px;
+    column-gap: 16px;
+    row-gap: 24px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding: 12px 30px 12px 12px;
+        height: 20px;
+        background-color: $grayWhite;
+        border: none;
+        border-bottom: 1px solid $lightGray;
+        @include manrepoFont(500, 18px, 136%);
+
+        &:hover {
+          border: none;
+          border-bottom: 1px solid #8B8D92;
+        }
+
+        &:focus {
+          outline: 0;
+          border: none;
+          border-bottom: 1px solid #8B8D92;
+        }
+      }
+    }
+
+      .email {
+        grid-column: span 2;
+      }
+    }
+
+    .button {
+      max-width: fit-content;
+    }
+  }
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
