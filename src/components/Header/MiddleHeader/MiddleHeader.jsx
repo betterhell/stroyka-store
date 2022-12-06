@@ -58,7 +58,7 @@ const MiddleHeader = () => {
             </div>
 
             <div className={classes.buttonBar}>
-                <button onClick={() => navigate("/login")} className={classes.profileBtn}>
+                <button onClick={() => navigate("/profile")} className={classes.profileBtn}>
                     <ProfileIcon />
                     <p>Профиль</p>
                 </button>

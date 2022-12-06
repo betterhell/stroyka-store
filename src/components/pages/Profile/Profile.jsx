@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {getAuth} from "firebase/auth";
+import {getAuth, updateProfile} from "firebase/auth";
 import classes from "./_Profile.module.scss"
 import Button from "../../UI/Button/Button";
 import {useNavigate} from "react-router-dom";
+import {doc, updateDoc} from "firebase/firestore";
+import {db} from "../../../firebase.config";
 
 const Profile = () => {
     const auth = getAuth()
@@ -12,8 +14,12 @@ const Profile = () => {
     const [formData, setFormData] = useState({
         name: auth.currentUser.displayName,
         email: auth.currentUser.email,
+        lastName: auth.currentUser.La
     })
 
+    const {name, email} = formData
+
+    const [error, setError] = useState("")
 
     const onLogout = () => {
         auth.signOut()
@@ -28,7 +34,23 @@ const Profile = () => {
         )
     }
 
-    /* @createNewUserCredentials */
+    const changeFormData = async () => {
+        try {
+           if (auth.currentUser.displayName !== name) {
+               await updateProfile(auth.currentUser, {
+                   displayName: name,
+               })
+
+               const userRef = doc(db, "users", auth.currentUser.uid)
+               await updateDoc(userRef, {
+                   name,
+               })
+           }
+        } catch (error) {
+            setError("Данные не обновились!")
+        }
+    }
+
     return (
         <div className={classes.profile}>
             <div className={classes.profileHeader}>
@@ -36,7 +58,7 @@ const Profile = () => {
                 <Button label="Выйти" action={onLogout}  />
             </div>
 
-            <form className={classes.profileForm}>
+            <form onSubmit={changeFormData} className={classes.profileForm}>
                 <div className={classes.name}>
                     <label htmlFor="nameInput">Имя</label>
                     <input id="nameInput" onChange={onChange} placeholder={formData.name} type="text"/>
@@ -65,7 +87,8 @@ const Profile = () => {
                     <label htmlFor="confirmPasswordInput">Подтверждение пороля</label>
                     <input id="confirmPasswordInput" onChange={onChange} placeholder="******" type="password"/>
                 </div>
-                <button>Сохранить</button>
+                {error}
+                <Button initialBg="yellow" label="Сохранить" />
             </form>
         </div>
     );

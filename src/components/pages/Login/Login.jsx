@@ -48,7 +48,7 @@ const Login = () => {
             )
 
             if (userCredential.user) {
-                navigate("/profile")
+                navigate("/")
             }
 
         } catch (error) {
@@ -82,13 +82,13 @@ const Login = () => {
                         />
                     }
 
-                    <Link to="/registration">Забыли пароль?</Link>
+                    <Link to="/sign-in">Забыли пароль?</Link>
                 </div>
 
                 <div className={classes.actions}>
                     {error === "" ? null : <p className={classes.errorMessage}>{error}</p> }
                     <Button initialBg="yellow" label="Войти" />
-                    <Link to="/registration">Создать учётную запись</Link>
+                    <Link to="/sign-up">Создать учётную запись</Link>
                 </div>
             </form>
         </div>

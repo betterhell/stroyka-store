@@ -7,6 +7,7 @@ import Notfound from "./components/pages/Notfound/Notfound";
 import Login from "./components/pages/Login/Login";
 import Registration from "./components/pages/Registration/Registration";
 import Profile from "./components/pages/Profile/Profile";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
 
@@ -16,10 +17,12 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Main />} />
                 <Route path="/actions" element={<Promotions />} />
+                <Route path="/profile" element={<PrivateRoute />}>
+                    <Route path="/profile" element={<Profile />} />
+                </Route>
                 <Route path="*" element={<Notfound />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/registration" element={<Registration />} />
+                <Route path="/sign-in" element={<Login />} />
+                <Route path="/sign-up" element={<Registration />} />
             </Routes>
         <Footer />
     </BrowserRouter>
