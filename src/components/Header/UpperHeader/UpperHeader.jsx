@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import classes from "./_UpperHeader.module.scss"
 import {ReactComponent as LocationIcon} from "../../../assets/icons/mapIcon20px.svg";
+import Modal from "../../UI/Modal/Modal";
+import SearchInput from "../../UI/Input/SearchInput";
+import {cityList} from "../../../data/cityList";
+import {ReactComponent as ArrowRightIcon} from "../../../assets/icons/arrowRightIcon16px.svg";
 
 const UpperHeader = () => {
     const [userScreenWidth, setUserScreenWidth] = useState(0)
+    const [modalOpen, setModalOpen] = useState(false)
 
     const clientScreenWidth = window.innerWidth
 
@@ -18,10 +23,22 @@ const UpperHeader = () => {
     return (
         <div className={classes.upperHeader}>
             <div className={classes.location}>
-                <button className={classes.locationButton}>
+                <button onClick={() => setModalOpen(true)} className={classes.locationButton}>
                     <LocationIcon  />
                     <p>Москва</p>
                 </button>
+                <Modal modalActive={modalOpen} setModalActive={setModalOpen}>
+                    <h1>Выберите ваш город</h1>
+                    <SearchInput />
+                    <div className={classes.modal__cityList}>
+                        {cityList.map(city =>
+                            <a href="/" key={city.id}>
+                                <ArrowRightIcon />
+                                {city.name}
+                            </a>
+                        )}
+                    </div>
+                </Modal>
             </div>
 
         {clientScreenWidth <= 920

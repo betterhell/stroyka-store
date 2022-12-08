@@ -51,6 +51,34 @@
   }
 }
 
+.modal__cityList {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  list-style-type: none;
+  column-gap: 36px;
+  row-gap: 16px;
+  align-items: center;
+
+  svg {
+    display: none;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include manrepoFont(500, 16px, 150%);
+    color: $grayBlack;
+
+    &:hover  {
+      svg {
+        display: flex;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .upperHeader {
     padding: 0 90px;

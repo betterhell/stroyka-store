@@ -1,0 +1,58 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(23, 27, 36, 0.6);
+  opacity: 0;
+  pointer-events: none;
+
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    width: 572px;
+    background: white;
+
+    input {
+      width: 525px;
+    }
+
+    button {
+      right: 5px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .closeIcon {
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+    border: none;
+    background: transparent;
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
