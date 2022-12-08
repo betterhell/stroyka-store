@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import {ReactComponent as PlusIcon} from "../../../assets/icons/plusIcon24px.svg";
 import {ReactComponent as MinusIcon} from "../../../assets/icons/minusIcon24px.svg";
-import classes from "./_IncrementDecrementInput.module.scss"
+import classes from "./_ProductCounter.module.scss"
 
-const IncrementDecrementInput = () => {
+const ProductCounter = () => {
     const [incrementItem, setIncrementItem] = useState(1)
 
+
     const increment = () => {
-        if (incrementItem < 99) {
+        if (incrementItem < 10) {
             setIncrementItem(incrementItem + 1)
         }
         return incrementItem
@@ -29,4 +30,4 @@ const IncrementDecrementInput = () => {
     );
 };
 
-export default IncrementDecrementInput;
+export default ProductCounter;

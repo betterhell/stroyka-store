@@ -42,6 +42,7 @@ export const productList = [
         image: product01,
         desc: "Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)",
         regularPrice: 499,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -50,6 +51,7 @@ export const productList = [
         image: product02,
         desc: "Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная",
         regularPrice: 660,
+        popular: false,
         discount: true,
         discountedPercent: 50,
         id: uuidv4()
@@ -58,6 +60,7 @@ export const productList = [
         image: product03,
         desc: "Сетка Рабица яч. 50х50/1,5х10 м-ОЦ",
         regularPrice: 1890,
+        popular: false,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -66,6 +69,7 @@ export const productList = [
         image: product04,
         desc: "Металлочерепица, цвет коричневый, 1.18 х 1.15 м",
         regularPrice: 999,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -74,6 +78,7 @@ export const productList = [
         image: product05,
         desc: "Керамогранит Yasmin 598х185 коричневый C-YA4M112D",
         regularPrice: 899,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -82,6 +87,7 @@ export const productList = [
         image: product06,
         desc: "Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг",
         regularPrice: 275,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -90,6 +96,7 @@ export const productList = [
         image: product07,
         desc: "Грунтовка Старатели 10л глубокого проникновения",
         regularPrice: 839,
+        popular: false,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -98,6 +105,7 @@ export const productList = [
         image: product08,
         desc: "Гипсокартон Волма, 2500 х 1200 х 12,5 мм",
         regularPrice: 335,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -106,6 +114,7 @@ export const productList = [
         image: product09,
         desc: "Профиль 0,55мм для гипсокартона",
         regularPrice: 195,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -114,6 +123,7 @@ export const productList = [
         image: product10,
         desc: "Рулетка 3м",
         regularPrice: 100,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -122,6 +132,7 @@ export const productList = [
         image: product12,
         desc: "Уголок серый канализационный Д110 ГР90",
         regularPrice: 335,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -130,6 +141,7 @@ export const productList = [
         image: product13,
         desc: "Knauf Ротбанд, 30 кг",
         regularPrice: 508,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -138,6 +150,7 @@ export const productList = [
         image: product14,
         desc: "Саморез по металлу 3,5х25 мм для гипсокартона",
         regularPrice: 340,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -146,6 +159,7 @@ export const productList = [
         image: product16,
         desc: "Клейкая лента металлизированная Изоспан FL 5х5000 см",
         regularPrice: 225,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -154,6 +168,7 @@ export const productList = [
         image: product17,
         desc: "Шпатлевка масляно-клеевая 3кг Л-С",
         regularPrice: 212,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -162,6 +177,7 @@ export const productList = [
         image: product18,
         desc: "Штукатурка цементная толстослойная PLITONIT Т1+ 25 кг",
         regularPrice: 349,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -170,6 +186,7 @@ export const productList = [
         image: product19,
         desc: "Штукатурка гипсовая Волма Слой, 5 кг",
         regularPrice: 229,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -178,6 +195,7 @@ export const productList = [
         image: product20,
         desc: "Клей плиточный Дауэр Кварц Dauer Quartz 25кг",
         regularPrice: 490,
+        popular: false,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -186,6 +204,7 @@ export const productList = [
         image: product21,
         desc: "Клей плиточный Dauer Maxi Дауэр Макси 25кг толстослойный",
         regularPrice: 470,
+        popular: false,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -194,6 +213,7 @@ export const productList = [
         image: product22,
         desc: "Кнауф МП 75 штукатурка гипсовая МН 30кг",
         regularPrice: 380,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -202,6 +222,7 @@ export const productList = [
         image: product23,
         desc: "Штукатурка гипсовая Основит Т-25 Гипсвэлл",
         regularPrice: 295,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -210,6 +231,7 @@ export const productList = [
         image: product24,
         desc: "Затирка CERESIT CE33 (ЦЕРЕЗИТ СЕ33) розовая (2 кг)",
         regularPrice: 250,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -218,6 +240,7 @@ export const productList = [
         image: product25,
         desc: "Основит PG 35 W (Т-35) Экосилк Шпатлевка гипсовая белая (20 кг)",
         regularPrice: 320,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -226,6 +249,7 @@ export const productList = [
         image: product26,
         desc: "Клей гипсовый монтажный Knauf Перлфикс 30 кг",
         regularPrice: 425,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -234,6 +258,7 @@ export const productList = [
         image: product27,
         desc: "Шпатлевка готовая финишная Sheetrock Danogips SuperFinish 17 л",
         regularPrice: 2200,
+        popular: false,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -242,6 +267,7 @@ export const productList = [
         image: product28,
         desc: "Грунтовка Knauf Тифенгрунд морозостойкая 10 кг",
         regularPrice: 969,
+        popular: true,
         discount: false,
          discountedPercent: 25,
         id: uuidv4()
@@ -250,6 +276,7 @@ export const productList = [
         image: product29,
         desc: "Штукатурка гипсовая Megapolimer Gips Machine application 137 для машинного нанесения 30 кг",
         regularPrice: 315,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -258,6 +285,7 @@ export const productList = [
         image: product30,
         desc: "Шпатлевка финишная полимерная Litokol Litofinish Fine белая 20 кг",
         regularPrice: 976,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -266,6 +294,7 @@ export const productList = [
         image: product31,
         desc: "Штукатурка гипсовая Perfekta Гипстар серая 30 кг",
         regularPrice: 502,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -274,6 +303,7 @@ export const productList = [
         image: product32,
         desc: "Штукатурка цементная высокопрочная Hands Socle PRO, 24 кг",
         regularPrice: 265,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -282,6 +312,7 @@ export const productList = [
         image: product33,
         desc: "Смесь М-200 монтажно-кладочная, Baumax (50 кг)",
         regularPrice: 229,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -290,6 +321,7 @@ export const productList = [
         image: product34,
         desc: "Клей плиточный (C0) BUILDER КП-500 25 кг.",
         regularPrice: 449,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -298,6 +330,7 @@ export const productList = [
         image: product35,
         desc: "Штукатурка Гипсовая Weber.Vetonit Profi Gyps Белая 30кг",
         regularPrice: 510,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
@@ -306,6 +339,7 @@ export const productList = [
         image: product36,
         desc: "Белый Цемент Holcim DecoCEM 500 50 Кг",
         regularPrice: 1377,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -314,6 +348,7 @@ export const productList = [
         image: product37,
         desc: "Гипс Русеан Г-16 40 Кг",
         regularPrice: 714,
+        popular: false,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()
@@ -322,6 +357,7 @@ export const productList = [
         image: product38,
         desc: "Грунтовка Глубокого Проникновения Старатели 10 Л",
         regularPrice: 663,
+        popular: true,
         discount: true,
         discountedPercent: 25,
         id: uuidv4()
