@@ -16,6 +16,7 @@ const UpperHeader = () => {
         setUserScreenWidth(clientScreenWidth)
     }
 
+
     useEffect(() => {
        window.addEventListener("resize", updateDimensions)
     },)
@@ -25,8 +26,9 @@ const UpperHeader = () => {
             <div className={classes.location}>
                 <button onClick={() => setModalOpen(true)} className={classes.locationButton}>
                     <LocationIcon  />
-                    <p>Москва</p>
+                    <p>{cityList[0].name}</p>
                 </button>
+
                 <Modal modalActive={modalOpen} setModalActive={setModalOpen}>
                     <h1>Выберите ваш город</h1>
                     <SearchInput />

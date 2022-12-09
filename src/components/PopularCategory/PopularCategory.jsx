@@ -3,7 +3,7 @@ import {categoryList} from "../../data/categoryList";
 import classes from "./_PopularCategory.module.scss"
 import LinkButton from "../UI/LinkButton/LinkButton";
 
-const CategoryCard = () => {
+const PopularCategory = () => {
     return (
         <div className={classes.category}>
             <div className={classes.categoryHeader}>
@@ -12,16 +12,16 @@ const CategoryCard = () => {
             </div>
             <div className={classes.categoryWrapper}>
                 {categoryList.map((category) =>
-                    <>
+                    <div key={category.id}>
                         <a className={classes.categoryCard} href="/category/:id">
                             <p>{category.name}</p>
                             <img src={category.image} alt="Image"/>
                         </a>
-                    </>
+                    </div>
                 )}
             </div>
         </div>
     );
 };
 
-export default CategoryCard;
+export default PopularCategory;

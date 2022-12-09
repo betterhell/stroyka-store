@@ -3,7 +3,7 @@ import classes from "./_ProductCard.module.scss"
 import Button from "../Button/Button";
 import ProductCounter from "../Counter/ProductCounter";
 
-const ProductCard = ({label, key, desc, image, discountedPercent, discount, regularPrice}) => {
+const ProductCard = ({label, id, desc, image, discountedPercent, discount, regularPrice}) => {
     const [open, setOpen] = useState(false)
 
     const discountPrice = regularPrice- ((regularPrice / 100) * discountedPercent).toFixed()
@@ -36,7 +36,7 @@ const ProductCard = ({label, key, desc, image, discountedPercent, discount, regu
                         <p>{regularPrice} ₽</p>
                     }
                 </div>
-                {!open ? <Button action={handleAddToBucket} label={label} initialBg="yellow" /> : <ProductCounter key={key} /> }
+                {!open ? <Button action={handleAddToBucket} label={label} initialBg="yellow" /> : <ProductCounter key={id} /> }
             </div>
         </div>
     );

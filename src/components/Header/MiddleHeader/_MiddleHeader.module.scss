@@ -5,6 +5,8 @@
   border-bottom: 1px solid $borderColor;
   padding: 18px 140px;
   display: grid;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
   height: fit-content;
   gap: 16px;
   grid-template-columns: repeat(9, 1fr);
@@ -66,6 +68,16 @@
       }
     }
   }
+}
+
+.middleHeader.fixed {
+  position: fixed;
+  padding: 9px 140px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  top: 0;
+  background-color: #FFFFFF;
 }
 
 @media screen and (max-width: 1300px) {

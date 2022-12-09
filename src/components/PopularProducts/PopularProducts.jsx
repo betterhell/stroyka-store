@@ -1,6 +1,5 @@
 import React from 'react';
 import {productList} from "../../data/productList";
-import ProductCard from "../UI/ProductCard/ProductCard";
 import classes from "./_PopularProducts.module.scss"
 
 const PopularProducts = () => {
@@ -8,10 +7,6 @@ const PopularProducts = () => {
 
     return (
         <div className={classes.popularCategory}>
-            {popularList.map((popular) =>
-                <>
-                </>
-            )}
         </div>
     );
 };

@@ -11,18 +11,30 @@ import {ReactComponent as BasketIcon} from "../../../assets/icons/basketIcon24px
 import MobileMenu from "../../MobileMenu/MobileMenu";
 import {useNavigate} from "react-router-dom";
 
-
 const MiddleHeader = () => {
     const navigate = useNavigate()
 
     const [userScreenWidth, setUserScreenWidth] = useState(0)
     const [isOpen, setIsOpen] = useState(false)
+    const [fixed, setFixed] = useState(false)
 
     const clientScreenWidth = window.innerWidth
+    const clientScreenHeight = window.innerHeight
+
+    const scroll = window.scrollY
 
     const updateDimensions = () => {
         setUserScreenWidth(clientScreenWidth)
     }
+
+    const headerFixedHandler = () => {
+        if (window.scrollY >= 200) {
+            setFixed(true)
+        } else {
+            setFixed(false)
+        }
+    }
+
 
     const mobileMenuToggle = () => {
         if (!isOpen) {
@@ -31,13 +43,14 @@ const MiddleHeader = () => {
             setIsOpen(false)
         }
     }
+    window.addEventListener("scroll", headerFixedHandler)
 
     useEffect(() => {
         window.addEventListener("resize", updateDimensions)
     },)
 
     return (
-        <div className={classes.middleHeader}>
+        <div className={fixed ? `${classes.middleHeader} ${classes.fixed}` : `${classes.middleHeader}`}>
              <div className={classes.logo}>
                  <a href="/"><Logo /></a>
              </div>
