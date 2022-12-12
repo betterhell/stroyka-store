@@ -45,16 +45,14 @@ const HeroSlider = () => {
                     <div className={classes.slider_info}>
                         <h1>{currentSlide.label}</h1>
                         <p>{currentSlide.desc}</p>
-                    </div>
-
-                    <div className={classes.slider_buttons}>
                         <div className={classes.slider_link}>
                             <a href={currentSlide.link}>Подробнее</a>
                         </div>
-                        <div className={classes.slider_controls}>
-                            <Button action={prevSlide} icon={<LeftArrowIcon /> } />
-                            <Button action={nextSlide} icon={<RightArrowIcon />} />
-                        </div>
+                    </div>
+
+                    <div className={classes.slider_controls}>
+                        <Button action={prevSlide} icon={<LeftArrowIcon /> } />
+                        <Button action={nextSlide} icon={<RightArrowIcon />} />
                     </div>
                 </div>
             </div>

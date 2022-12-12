@@ -4,13 +4,14 @@
 .promoWrapper {
   margin: 40px auto;
   max-width: 1160px;
-  width: 100%;
+  width: calc(100vw - 90px);
 
   .promoHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+
 
     h2 {
       margin: 0;
@@ -23,6 +24,26 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .promoWrapper {
+    width: calc(100vw - 90px)
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .promoWrapper {
+    .promoContainer {
+      grid-template-columns: repeat(4, 1fr);
+      overflow-y: hidden;
+      //margin: 0 calc(-50vw + 50%);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
 

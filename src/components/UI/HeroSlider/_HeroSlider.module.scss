@@ -5,9 +5,15 @@
   position: relative;
   max-width: 1360px;
   margin: 40px auto 80px auto;
-  //padding: 40px 0 80px 0;
 
   .slider_bg {
+    position: relative;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
   }
 
   .slider_actions {
@@ -22,27 +28,46 @@
       width: 50%;
 
       h1 {
-        @include manrepoFont(700, 48px, 120%);
+        @include manrepoFont(700, calc(2vw + 1rem), 120%);
         color: $lowerHeaderTextColor;
         margin: 0;
       }
 
       p {
-        @include manrepoFont(400, 20px, 140%);
+        @include manrepoFont(400, calc(1vw + 5px), 140%);
         color: $lowerHeaderTextColor;
       }
     }
+
+    a {
+      padding: 12px 24px;
+      background-color: $yellow;
+      color: $black;
+      text-decoration: none;
+      @include manrepoFont(500, 18px, 136%);
+
+      &:hover {
+        background-color: $grayBlack;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $grayBlack;
+        color: $lightGray;
+      }
+    }
+
+    .slider_link {
+      margin: 30px 0 0 0;
+    }
   }
 
-  .slider_buttons {
-    padding: 0 90px;
-    max-width: 1180px;
-    width: 100%;
+  .slider_controls {
     position: absolute;
     bottom: 40px;
+    right: 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 12px;
 
     button {
       background-color: white;
@@ -64,28 +89,6 @@
         }
       }
     }
-
-    a {
-      padding: 12px 24px;
-      background-color: $yellow;
-      color: $black;
-      text-decoration: none;
-      @include manrepoFont(500, 18px, 136%);
-
-      &:hover {
-        background-color: $grayBlack;
-        color: $white;
-      }
-
-      &:active {
-        background-color: $grayBlack;
-        color: $lightGray;
-      }
-    }
-  }
-
-  .slider_controls {
-    display: flex;
-    gap: 12px;
   }
 }
+

@@ -6,12 +6,12 @@ import PopularProducts from "../../PopularProducts/PopularProducts";
 
 const Main = () => {
     return (
-        <>
+        <main>
             <HeroSlider />
             <Promotions count={4} />
             <PopularCategory />
             <PopularProducts />
-        </>
+        </main>
     );
 };
 
