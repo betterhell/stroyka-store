@@ -53,6 +53,7 @@
       h2 {
         margin: 0;
       }
+
       p {
         margin: 0;
         align-self: flex-end;
@@ -62,6 +63,25 @@
     }
     button {
       width: 100%;
+    }
+  }
+}
+
+.horozontal {
+  flex-direction: column;
+  max-width: 278px;
+  height: 416px;
+
+  .cardInfo {
+    border-left: none;
+    border-top: 1px solid $borderColor;
+    height: 100%;
+
+    a {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }

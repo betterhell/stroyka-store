@@ -269,7 +269,7 @@ export const productList = [
         regularPrice: 969,
         popular: true,
         discount: false,
-         discountedPercent: 25,
+        discountedPercent: 25,
         id: uuidv4()
     },
     {
@@ -339,7 +339,7 @@ export const productList = [
         image: product36,
         desc: "Белый Цемент Holcim DecoCEM 500 50 Кг",
         regularPrice: 1377,
-        popular: false,
+        popular: true,
         discount: false,
         discountedPercent: 25,
         id: uuidv4()

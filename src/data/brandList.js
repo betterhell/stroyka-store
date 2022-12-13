@@ -17,61 +17,61 @@ export const brandList = [
     {
         image: bever,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: braer,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: decra,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: engels,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: euroBlock,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: galen,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: leonardoStone,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: lsr,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: modFormat,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: mstera,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: perfekta,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
     {
         image: recke,
         link: "https://example.com/",
-        id: uuidv4,
+        id: uuidv4(),
     },
 ]

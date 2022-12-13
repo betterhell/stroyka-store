@@ -1,3 +1,52 @@
-.popularCategory {
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
+.popularCategory {
+  width: calc(100vw - 90px);
+  margin: 80px auto;
+  max-width: 1160px;
+
+  .popularHeader {
+    margin-bottom: 16px;
+
+    h2 {
+      @include manrepoFont(600, 34px, 130%);
+      margin: 0 0 16px 0;
+    }
+  }
+
+  .popularWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    flex-direction: column;
+    max-width: 278px;
+    height: 416px;
+
+    .cardInfo {
+      border-left: none;
+      border-top: 1px solid $borderColor;
+      height: 100%;
+
+      a {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .popularCategory {
+    .popularWrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
 }
